@@ -26,9 +26,11 @@ You can create and destroy applications all you want, and you can create multipl
 
 There are tons of documentation pages on heroku.  [Github Heroku Integration](https://devcenter.heroku.com/articles/github-integration) is one that will teach you how to link your github account with your heroku account.  This makes it so that you can automatically launch the code from your github repository to make it live on a heroku address.  You should link your hawbridge-coders application with the 'master' branch of your github repository to start with, but you can always change this to a different branch or repository, or turn off automatic deploy and use the dashboard to manually deploy any of your other branches, or even repositories.
 
+Once you link the account and set up the auto deploy to deploy the master branch of your hawbridge_coders Github repository, heroku will attempt to build the code into a running application.  You can monitor the 'build' process using the heroku dashboard for the application.  Click the 'Activities' tab.  It will show all activities, including builds.  You should see an activity with 'Build Succeeded', and a subsequent activity 'Deployed'.  If you see this, you can navigate to the 'Settings' tab of the heroku dashboard for your hawbridge-coders application, and scroll down to the 'Domains' setting. Copy the 'Heroku Domain' and paste it into another browser tab and hit enter. It should look something like the original (dmlond-hawbridge-coders)[http://dmlond-hawbridge-coders.herokuapp.com].  You can also append ('/hello')[[http://dmlond-hawbridge-coders.herokuapp.com/hello] and ('/goodbye')[[http://dmlond-hawbridge-coders.herokuapp.com/goodbye] to your url to get differnt pages that are made available by the app.
+
 ### Managing your Github Repository
 
-For hawbridge-coders, you should make sure to keep the 'master' branch the same as the 'master' branch of dmlond/hawbridge_coders. This is not as hard as it sounds. Branching in github is really easy, and you can create as many branches as you want. So, if you want to try something out, first create a branch (some developers name branches for trying things out starting with 'try_', and name known stable versions for deployment starting with 'version' and a number).
+The original master branch of dmlond/hawbridge_coders is designed to build successfully. Each week, you will be pulling changes from dmlond/hawbridge_coders master that are also designed to build successfully. This is why it is important to keep your master branch in sync with dmlond/hawbridge_coders master branch. This is not as hard as it sounds. Branching in github is really easy, and you can create as many branches as you want. You can change your heroku app to auto deploy a different branch at any time. With autodeploy set up on a branch, each time you push changes to the branch, an attempt is made to build and deploy the application to heroku automatically.  If the build is successful, the new changes will be made 'live'.  If the build 'breaks' you will need to figure out what changes you made that broke it (GitHub can be very helpful here). So, if you want to try something out, first create a branch (some developers name branches for trying things out starting with 'try_', and name known stable versions for deployment starting with 'version' and a number), then set the application to autodeploy that branch. Alternatively, you can keep the 'autodeploy' set to master, but manually deploy another branch to test things out.
 
 ### If you are using a School Computer
 
@@ -53,6 +55,7 @@ Because there is no guarantee that you will get the same computer each time you 
   - click 'clone'
   - type 'hawbridge_coders' (it should bring up a listing that you can click)
   - Choose 'Desktop' as the destination
+- Set your Heroku application to autodeploy the master branch if you have changed it
 
 #### To do at the end of each session
 
@@ -67,4 +70,5 @@ Because there is no guarantee that you will get the same computer each time you 
   - click 'Preferences'
   - click 'Sign Out' next to your name
 - Open Finder (your file viewer), find the 'hawbridge_coders' folder in the Desktop, and move it to trash. Empty Trash.
+- Set your Heroku application to autodeploy the master branch if you have changed it
 
