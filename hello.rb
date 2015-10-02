@@ -1,5 +1,9 @@
 require 'sinatra'
 
+get '/' do
+  "Hawbridge Coders"
+end
+
 get '/hello' do
   "Hello World!"
 end
