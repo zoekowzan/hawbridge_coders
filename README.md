@@ -1,6 +1,6 @@
 # hawbridge_coders
 
-This is the base website for the Hawbridge Coding Club.  It will be the foundation for learning to develop a simple web application to be run on (heroku)[https://www.heroku.com/home].
+This is the base website for the Hawbridge Coding Club.  It will be the foundation for learning to develop a simple web application to be run on [heroku](https://www.heroku.com/home).
 
 ### Creating a Github Account
 
