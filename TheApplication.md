@@ -1,6 +1,6 @@
 ## The Hawbridge Coders Application
 
-This application is written using the [Ruby](https://www.ruby-lang.org/en/) programming language [1]. To further simplify things, it uses a special ruby 'gem' called [sinatra](http://www.sinatrarb.com/)[2]. This 'microframework' makes it easy to create simple web sites and applications by giving you the ability to write a small amount of code which instructs the framework to magically generate a bunch of HTML for you for a given 'page' on your site. 
+This application is written using the [Ruby](https://www.ruby-lang.org/en/) programming language [1]. To further simplify things, it uses a special ruby 'gem' called [sinatra](http://www.sinatrarb.com/) [2]. This 'microframework' makes it easy to create simple web sites and applications by giving you the ability to write a small amount of code which instructs the framework to magically generate a bunch of HTML for you for a given 'page' on your site. 
 
 While there are a couple of files in this repository that are critical for setting up the ruby-sinatra 'infrastructure', the entire website can be coded in a single file, for example [hello.rb](/dmlond/hawbridge_coders/blob/master/hello.rb).
 
