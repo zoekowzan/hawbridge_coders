@@ -4,6 +4,19 @@ This application is written using the [Ruby](https://www.ruby-lang.org/en/) prog
 
 While there are a couple of files in this repository that are critical for setting up the ruby-sinatra 'infrastructure', the entire website can be coded in a single file, for example [hello.rb](/hello.rb).
 
+This creates 3 'pages' or 'endpoints' to our website. Each page is served from the same basic site, e.g. if you are serving your site on heroku at http://dmlond-hawbridge-coders.herokuapp.com, this would make 3 pages available for you to visit on this 'domain'
+
+'/'
+The root page, which can also be called the 'index' for the site. This is the page that is served when the domain is visited in the browser without any extra directories.
+
+'/hello'
+This page can be accessed at http://dmlond-hawbridge-coders.herokuapp.com/hello. We append '/hello' to the domain to get to this page.
+
+'/goodbye'
+Another page on the site.
+
+You can edit this file, and either change what is 'returned' by each page definition, or add your own page definitions.  We will be learning about sinatra, so for now just stick to returning simple strings (words in single or double quotes). Also, you may want to create a separate branch to make changes and autodeploy the branch to heroku instead of master to keep this in sync with dmlond/master.
+
 ### Alternatives
 There are a number of other ruby frameworks for ruby:
 
