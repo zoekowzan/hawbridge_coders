@@ -10,6 +10,7 @@ Table Of Contents
 * [Fork this Repository](#fork-this-repository)
 * [Creating a Heroku Account and Free Application](#creating-a-heroku-account-and-free-application)
 * [Linking Heroku and Github](#linking-heroku-and-github)
+
 #### Working with Github
 * [Using the Github Web Interface](#using-the-github-web-interface)
 * [Managing your Github Repository with Branches](#managing-your-github-repository-with-branches)
@@ -47,7 +48,10 @@ Once you link the account and set up the auto deploy to deploy the master branch
 Using the Github Web Interface
 ==============================
 
-Github is not just a code repository. It also allows editing of items stored in your repository, and easy management of branches. You can write an entire website using the Github web interface alone.  If you are using your own computer, you may want to investigate installing the [Github Desktop](https://desktop.github.com/) application, and a text editor designed for programmers, such as [atom](https://atom.io) or [sublime](http://www.sublimetext.com/). We will attempt to use the Github browser interface in this class.
+Github is not just a code repository. It also allows editing of items stored in your repository, and easy management of branches. You can write an entire website using the Github web interface alone. When you click on a file in the repo browser, it will display a summary header with information about the file (number of lines, and size in bytes) and a list of options to use on the file (if you are not logged in to github, you may not see all of these options). It will then display the file, either with syntax highlighting if it is one of many supported programming languages, or in [Github Markdown](https://help.github.com/articles/markdown-basics/).  The 'Raw' button allows you to view the file in its plain text form (without syntax highlighting or markdown formatting). This also provides you with a link that you can use to download a copy of just one file without cloning the entire repository.
+
+
+  If you are using your own computer, you may want to investigate installing the [Github Desktop](https://desktop.github.com/) application, and a text editor designed for programmers, such as [atom](https://atom.io) or [sublime](http://www.sublimetext.com/). We will attempt to use the Github browser interface in this class.
 
 Managing your Github Repository with Branches
 ===============================
