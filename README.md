@@ -6,7 +6,7 @@ Table Of Contents
 =================
 
 #### Getting Started
-* (**Creating a Github Account**)[#Creating a Github Account]
+* (**Creating a Github Account**)[#creating-a-github-account]
 
 Creating a Github Account
 =========================
