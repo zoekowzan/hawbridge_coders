@@ -6,7 +6,7 @@ Table Of Contents
 =================
 
 #### Getting Started
-* [Creating a Github Account](#creating-a-github-account)\
+* [Creating a Github Account](#creating-a-github-account)
 * [Fork this Repository](#fork-this-repository)
 * [Creating a Heroku Account and Free Application](#creating-a-heroku-account-and-free-application)
 * [Linking Heroku and Github](#linking-heroku-and-github)
