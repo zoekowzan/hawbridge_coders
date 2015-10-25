@@ -26,7 +26,7 @@ Create an account. You should use a typical username for yourself (maybe reuse y
 Fork this Repository
 ====================
 
-  Using your browser, make sure you are viewing [dmlond/hawbridge_coders](https://github.com/dmlond/hawbridge_coders). Click the 'Fork' button. This makes a copy of hawbridge_coders repository, with any branches that I have created, owned and managed by your account. I can never revoke your fork, nor make any changes to your copy of the code, except through the mechanism of a pull-request which you can deny.  Note, this repository is Licensed with the [GPL Version 2 Open Source License](https://opensource.org/licenses/gpl-2.0.php).  All forks of this repository must also be licensed with the GPL Version 2 license, and refer back to the original dmlond/hawbidge_coders.
+  Using your browser, make sure you are logged into Github and viewing [dmlond/hawbridge_coders](https://github.com/dmlond/hawbridge_coders). Click the 'Fork' button. This makes a copy of hawbridge_coders repository, with any branches that I have created, owned and managed by your account. I can never revoke your fork, nor make any changes to your copy of the code, except through the mechanism of a pull-request which you can deny.  Note, this repository is Licensed with the [GPL Version 2 Open Source License](https://opensource.org/licenses/gpl-2.0.php).  All forks of this repository must also be licensed with the GPL Version 2 license, and refer back to the original dmlond/hawbidge_coders.
 
 Creating a Heroku Account and Free Application
 ==============================================
