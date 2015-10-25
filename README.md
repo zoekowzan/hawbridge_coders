@@ -2,19 +2,27 @@
 
 This is the base website for the Hawbridge Coding Club.  It will be the foundation for learning to develop a simple web application to be run on [heroku](https://www.heroku.com/home).
 
-### Creating a Github Account
+Table Of Contents
+=================
 
+#### Getting Started
+* (**Creating a Github Account**)[#Creating a Github Account]
+
+Creating a Github Account
+=========================
 Using your browser, navigate to [Github](https://github.com)
 Create an acccount. You should use a typical username for yourself (maybe reuse your gmail or facebook username), and a very strong password (10 characters, letters, numbers, spaces, dashes, special characters). You will need to supply an email address, and you will need to be able to login to this email to confirm the account.
 
 You might use this account for a very long time, so make it something that represents you as a person. If you want, you can add a a profile picture/avatar as well. If you already have an account that you can login with, skip this step.
 
-### Fork this Repository
+Fork this Repository
+====================
 
 Using your browser, make sure you are viewing [dmlond/hawbridge_coders](https://github.com/dmlond/hawbridge_coders)
 Select the version-1.0 branch.  Click the 'Fork' button. This makes a copy of hawbridge_coders owned and managed by your account. dmlond can never revoke your fork, nor can dmlond make any changes to your copy of the code, except through the mechanism of a pull-request which you can deny.  Note, this repository is Licensed with the [GPL Version 2 Open Source License](https://opensource.org/licenses/gpl-2.0.php).  All forks of this repository must also be licensed with the GPL Version 2 license, and refer back to the original dmlond/hawbidge_coders.
 
-### Creating a Heroku Account and Free Application
+Creating a Heroku Account and Free Application
+==============================================
 
 Using your browser, navigate to [heroku](https://id.heroku.com/login). Click Sign Up.  You can choose any username that you want, but you should probably reuse your github username to make things easy (but use a different password unless your github password is very strong).  You will need to supply an email address, and you will need to be able to login to this email to confirm the account. You will also be required to register a text messaging capable phone, and it will send you a confirmation text message.
 
