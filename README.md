@@ -6,7 +6,14 @@ Table Of Contents
 =================
 
 #### Getting Started
-* [Creating a Github Account](#creating-a-github-account)
+* [Creating a Github Account](#creating-a-github-account)\
+* [Fork this Repository](#fork-this-repository)
+* [Creating a Heroku Account and Free Application](#creating-a-heroku-account-and-free-application
+* [Linking Heroku and Github](#linking-heroku-and-github)
+#### Working with Github
+* [Using the Github Web Interface](#using-the-github-web-interface)
+* [Managing your Github Repository with Branches](#managing-your-github-repository-with-branches)
+
 
 Creating a Github Account
 =========================
@@ -30,17 +37,20 @@ Once you login, you will be presented with the Heroku 'Dashboard'. To create you
 
 You can create and destroy applications all you want, and you can create multiple applications, so dont worry if you dont like this name. It is just to make it easier to standardize the way we all navigate to your sight when it is live.
 
-### Linking Heroku and Github
+Linking Heroku and Github
+=========================
 
 There are tons of documentation pages on heroku.  [Github Heroku Integration](https://devcenter.heroku.com/articles/github-integration) is one that will teach you how to link your github account with your heroku account.  This makes it so that you can automatically launch the code from your github repository to make it live on a heroku address.  You should link your hawbridge-coders application with the 'master' branch of your github repository to start with, but you can always change this to a different branch or repository, or turn off automatic deploy and use the dashboard to manually deploy any of your other branches, or even repositories.
 
 Once you link the account and set up the auto deploy to deploy the master branch of your hawbridge_coders Github repository, heroku will attempt to build the code into a running application.  You can monitor the 'build' process using the heroku dashboard for the application.  Click the 'Activities' tab.  It will show all activities, including builds.  You should see an activity with 'Build Succeeded', and a subsequent activity 'Deployed'.  If you see this, you can navigate to the 'Settings' tab of the heroku dashboard for your hawbridge-coders application, and scroll down to the 'Domains' setting. Copy the 'Heroku Domain' and paste it into another browser tab and hit enter. It should look something like the original [dmlond-hawbridge-coders](http://dmlond-hawbridge-coders.herokuapp.com).  You can also append ['/hello'](http://dmlond-hawbridge-coders.herokuapp.com/hello) and ['/goodbye'](http://dmlond-hawbridge-coders.herokuapp.com/goodbye) to your url to get differnt pages that are made available by the app.
 
-### Using the Github Web Interface
+Using the Github Web Interface
+==============================
 
 Github is not just a code repository. It also allows editing of items stored in your repository, and easy management of branches. You can write an entire website using the Github web interface alone.  If you are using your own computer, you may want to investigate installing the [Github Desktop](https://desktop.github.com/) application, and a text editor designed for programmers, such as [atom](https://atom.io) or [sublime](http://www.sublimetext.com/). We will attempt to use the Github browser interface in this class.
 
-### Managing your Github Repository
+Managing your Github Repository with Branches
+===============================
 
 Git organizes your code repository into distinct 'branches'. A git repository always starts with a single 'branch' called 'master'. You can create as many branches as you want. In these branches, you can make small changes to your code, and submit the changes just to that branch, and test them out. If they work, you can come back to the master branch and 'merge' just these changes.  Or you can create a totally new branch called 'develop' where you write your code, and work with this branch (branch from and merging to this branch) until you are satisfied with it overall, and merge the 'develop' branch to 'master'. These are just 2 of the ways the programmers manage their code using git and GitHub.
 
