@@ -70,10 +70,10 @@ The `master` branch, and all `version-` branches (e.g. version-1.0) of dmlond/ha
 
 How Not to Break the Build
 ==========================
- The safest file for you to change is [views/index.erb](hawbridge_coders/views/index.erb). This is a special HTML file that can allow ruby code to be inserted into it using a 'templating' syntax called [ERB](http://www.stuartellis.eu/articles/erb/). There really isnt anything you can do to this file that will prevent heroku from successfully building and deploying your application, and only a few things that you can do with bad ruby syntax in the template to cause the application not to load when you view it in your browser.
-  The next file that you can change is [hello.rb](hawbridge_coders/hello.rb). This is a ruby script. It is easier to write bad ruby code which can cause the site not to load when you visit it in your browser. You should work through the Sinatra tutorials mentioned in the [Application Documentation](hawbridge_coders/TheApplication.md) before you edit this file.
-  The final file that you can change is [config.ru](hawbridge_coders/config.ru). Again, you should read about sinatra and ruby before you edit this file.
-  You should **NOT** change the Gemfile. If you have read about ruby and its [Bundler gem management system](http://bundler.io/), and if you: 
+ The safest file for you to change is [views/index.erb](/views/index.erb). This is a special HTML file that can allow ruby code to be inserted into it using a 'templating' syntax called [ERB](http://www.stuartellis.eu/articles/erb/). There really isnt anything you can do to this file that will prevent heroku from successfully building and deploying your application, and only a few things that you can do with bad ruby syntax in the template to cause the application not to load when you view it in your browser.
+  The next file that you can change is [hello.rb](/hello.rb). This is a ruby script. It is easier to write bad ruby code which can cause the site not to load when you visit it in your browser. You should work through the Sinatra tutorials mentioned in the [Application Documentation](/TheApplication.md) before you edit this file.
+  The final file that you can change is [config.ru](/config.ru). Again, you should read about sinatra and ruby before you edit this file.
+  You should **NOT** change the Gemfile. If you have read about ruby and its [Bundler gem management system](http://bundler.io/), and if you can: 
   * clone the repository to your machine with ruby and bundler installed
   * run bundle on the application, which updates Gemfile.lock
   * commit and push these changes back to your repository
