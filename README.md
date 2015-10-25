@@ -73,6 +73,13 @@ Weekly Pull Requests
 ====================
 Each week, I will submit pull requests to your repository with changes from dmlond/hawbridge_coders that I have made to add new features, branches, or edit the instructions and documentation. You should login to your Github hawbridge_coders account, and click on the `Pull requests` link on the right hand menu. Here you will see any open pull requests that I (or others, possibly) have created to suggest changes that you should make to your fork of the code (you can also see closed pull requests by clicking on 'closed' at the top). Click on the pull request, and it will give you the option of merging the changes that I have made into your repository.  You can then Confirm these merged changes. This will change your `master` branch. You can also ignore pull requests by closing them without merging them, if you are not interested in the changes that they would provide to your code.
 
+If I make a pull request to you, I will also create a new `version-` branch in my own repository. You should shift-click the link the 'dmlond/hawbridge_coders' that is under your Repository name at the top of the page to open dmlond/hawbridge_coders in another browser tab, and then click 'Branches' to see the branches that I have created. You can synchronize these to your repository, and keep them in sync, by doing the following in the tab with your fork of the repository:
+
+* Click 'Branches'
+* type the `version-` exactly as it appears in dmlond/hawbridge_coders
+* click 'Create branch: version- from 'master'
+* If you see that 'This branch is X commits behind dmlond:version-*' you should choose click the 'Pull Request' button.
+
 The dmlond/master and all dmlond `version-` branches are designed to build and deploy successfully. If you have not changed your fork master, or version- branches, these should continue to build successfully for you as well.
 
 How Not to Break the Build
