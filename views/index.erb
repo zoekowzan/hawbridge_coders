@@ -12,13 +12,20 @@
      <p>Welcome</p>
     </div>
     
-    <div class="headable">
-      <p><em>TADA!</em></p>
+    <div class="hidable">
+      <p><em>Javascript can make hidden elements visible, and vice versa</em></p>
     </div>
-    
+    <button id="reveal_hidable">Reveal Hidden Message</button><button id="hide_hidable">Hide Message</button>
+
     <ul>
-      <li id='item1' class="red">This should be red</li>
-      <li id='item2' class="blue">This should be blue</li>
+      <li id='item1' class="red">
+        <p>This should be red</p>
+        <button id="make_item1_red">Make Red</button><button id="make_item1_blue">Make blue</button>
+      </li>
+      <li id='item2' class="blue">
+        <p>This should be blue</p>
+        <button id="make_item2_red">Make Red</button><button id="make_item2_blue">Make blue</button>
+      </li>
     </ul>
   </body>
 </html>
