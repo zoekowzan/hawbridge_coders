@@ -4,10 +4,10 @@ var toggle_hideable = function() {
     this_element = elements[i]
     if (!(this_element.style) || this_element.style.display === 'block' || this_element.style.display === '')
       this_element.style.display = 'none';
-      document.getElementById('toggle_hideable').innerHTML = 'Reveal Hidden Message';
+      document.getElementById('toggle_hideable_button').innerHTML = 'Reveal Hidden Message';
     else
-      this_element.style.display = 'block'
-      document.getElementById('toggle_hideable').innerHTML = 'Hide Message';
+      this_element.style.display = 'block';
+      document.getElementById('toggle_hideable_button').innerHTML = 'Hide Message';
   }
 }
 
