@@ -12,6 +12,17 @@ var toggle_hideable = function() {
   }
 }
 
+var toggle_item_color = function(item_id) {
+  item = document.getElementByID(item_id);
+  if (item.style.color === 'red') {
+    item.style.color = 'blue';
+    document.getElementById('btn_toggle_'+item_id+'_color').innerHTML = "Make Red";
+  } else {
+    item.style.color = 'red';
+    document.getElementById('btn_toggle_'+item_id+'_color').innerHTML = "Make Blue";
+  }
+}
+
 window.onload = function(e) {
   toggle_hideable();
 }
