@@ -10,9 +10,9 @@ var toggle_hideable = function() {
       this_element.style.display = 'block';
       document.getElementById('toggle_hideable_button').innerHTML = 'Hide Message';
   }
-};
+}
 
 window.onload = function(e) {
   toggle_hideable();
-};
+}
 
