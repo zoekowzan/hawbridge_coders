@@ -3,4 +3,5 @@ window.onload = function(e) {
   for(i in elements){ 
     elements[i].style.display = "none";
   }
-}
+};
+
