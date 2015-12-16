@@ -5,6 +5,14 @@ This is the base website for the Hawbridge Coding Club.  It will be the foundati
 Table Of Contents
 =================
 
+#### Dynamic Web Applications
+* [Introduction](#introduction)
+* [Static Files](#static-files)
+* [Dynamic Pages](#dynamic-pages)
+* [Document Object Model](#document-object-model)
+* [Style](#style)
+* [Javascript](#javascript)
+
 #### Getting Started
 * [Creating a Github Account](#creating-a-github-account)
 * [Fork this Repository](#fork-this-repository)
@@ -16,6 +24,39 @@ Table Of Contents
 * [Managing your Github Repository with Branches](#managing-your-github-repository-with-branches)
 * [Weekly Pull Requests](#weekly-pull-requests)
 * [How Not to Break the Build](#how-not-to-break-the-build)
+
+Introduction
+============
+This repository holds all of the 'code' for a simple, but functional web application. A web application is a system designed to be served from a web server, and present a mixture of [static](#static-files) and [dynamic](#dynamic-pages) content in one or more 'pages' that present all of the ways that users can interact with the system.  Google, Amazon, even the heroku dashboard are all examples of web applications. 
+
+Because they serve dynamic content, web applications must be created using one of the variety of programming languages available (Java, Ruby, Python, Javascript, and others). These programming languages are required to respond to a request for a page on the application, and present content to the user based on the nature of the request. They typically provide special libraries or modules that make it easier for developers to write dynamic applications. This web application is written in [Sinatra](http://www.sinatrarb.com/), a framework module provided for the Ruby programming language.
+
+Static Files
+============
+In its infancy, the internet as we know it was made up of many web servers that served files to users.  These files would never change over time (unless the humans managing the web site uploaded new versions of the files for it to serve), or change from one request to another, and had no idea of a concept of a 'user'. Everyone got the same content, and it was all anonmyous. These files are termed 'static' because they always remain the same.
+
+Modern web applications still rely on the ability to serve static files. Image files are typically uploaded and served as static files (it is very computationally expensive to dynamically generate an image). [Stylesheet](#style) and [Javascript](#javascript) 'code' is also often served as static files (although these can be, and often are generated dynamically).
+
+Sinatra makes static files available in the 'public' directory of its application 'root'. The web application takes a request for a path, such as http://dmlond-hawbridge-coders.herokuapp.com/js/hawbridge_coders.js, and, if everything after the 'http://dmlond-hawbridge-coders.herokuapp.com/' (the root) is found as a static file in the 'public' directory (e.g. public/js/hawbridge_coders.js), it will serve that content to anyone requesting it, without requiring any authentication (this is one reason why some applications serve javascript and even images dynamically, in order to enforce authentication through the dynamic system before serving these 'assets').
+
+This application makes two static files available, a javascript file and a stylesheet file.  By convention, these are seperated into seperate directories, js and css, within the public directory, which are reflected in different paths in the url for each asset.
+
+Dynamic Pages
+=============
+Dynamic pages are what make modern web applications flexible and interesting. They are always made 'dynamic' by some programming language. The language may be a 'server-side' language such as ruby, java, or python. Server side languages run on the host web server, and respond to requests to the user with dynamic content. Users must click on a link, or push a button to get new content.
+
+The language may also be 'client-side' languages. Client side languages rely on the browser (Google Chrome, Firefox, Safari, Internet Explorer) to allow them to run inside them when the user uses the browser to request a page from a server. Client side languages are much more responsive to user actions, because they run on the users computer (in the browser), immediately in response to user actions. If a user request requires information to be provided by the web server hosting the application, the call for this content can be run in the background, while the user continues to interact with the site. Currently, [Javascript](#javascript) is **THE** client-side language supported by all modern web browsers.
+
+Dynamic pages often make use of [style](#style) to make them visually appealing, or present visual cues to the user to reinforce verbal responses. Like javascript, style is a client-side language that instructs modern browsers how to present the information. When you see boxes around information, or complex organization of things on the page, this is accomplished with style.
+
+Document Object Model
+=====================
+
+Style
+=====
+
+Javascript
+==========
 
 Creating a Github Account
 =========================
