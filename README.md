@@ -67,7 +67,7 @@ The 'body' object presents the main visible part of the page, and instructs the 
 
 The objects in the body will often have an 'id' and/or a 'class'. These are attributes that are used by [Javascript](#javascript) and [Style](#style) to identify objects on which to act. The 'id' for every single object in an HTML document must be unique from the 'id' of the other objects in the page. This allows style and javascript to easily access a single element to act upon. Objects can have multiple values for 'class', seperated by spaces, and multiple objects can have the same value of class. This allows javascript and style to act on multiple objects in your document at the same time, such as to apply a common font color scheme to all objects with a specific class.
 
-There are many other special attributes that you may find interesting and useful, such as 'onclick' for <button> objects (see javascript below). See if you can figure out how the ```<href>` object and attributes function using a google search for [html href](http://lmgtfy.com/?q=html+href).
+There are many other special attributes that you may find interesting and useful, such as 'onclick' for <button> objects (see javascript below). See if you can figure out how the ```<href>``` object and attributes function using a google search for [html href](http://lmgtfy.com/?q=html+href).
 
 The XHTML page returned by a web application (e.g. the ```<html>``` object and all of its internal objects) is called a 'Document', and Javascript and Style are said to manipulate the 'Document Object Model' or DOM. You will see lots of tutorials about javascript and style talk about the DOM. 
 
