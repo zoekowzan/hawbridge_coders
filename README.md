@@ -9,7 +9,7 @@ Table Of Contents
 * [Introduction](#introduction)
 * [Static Files](#static-files)
 * [Dynamic Pages](#dynamic-pages)
-* [Document Object Model](#document-object-model)
+* [Document Object Model](#xhtml-and-the-document-object-model)
 * [Style](#style)
 * [Javascript](#javascript)
 
@@ -51,15 +51,72 @@ The language may also be 'client-side'. Client side languages rely on the browse
 
 Sinatra makes dynamic content available from the 'views' directory in the root of the directory containing the application code. In sinatra, dynamic code must be 'rendered' by the code programmed to handle the path request. The entire web application is served by a one or more ruby files. This application uses a single ruby script [hello.rb](/blob/master/hello.rb). Inside this script, you will see the code to handle a 'get' request to the root of the application. It does so by rendering the :index as an [erb template](http://www.stuartellis.eu/articles/erb/). Sinatra interprets this as a request to use the views/index.erb file as a template, and use the ruby erb template processing system to dynamically fill out any variables that are in the template with real values, and then serve the content to the user. Currently, the root index is not very dynamic. It could just as easily be served as a static file index.html in the public directory without needing to write the code to handle the request in hello.rb. But, this will change.  Note that the hello.rb ruby script supports 'get' requests to two other paths '/hello' and '/goodbye' with dynamic content. The code for these paths return content right from the ruby program, and do not rely on templates. This could change if we need it to, thats what makes dynamic web applications so flexible. To change the way a path is handled, you change the code responding to that path to handle it any way you need it to be handled.
 
-Document Object Model
+XHTML and the Document Object Model
 =====================
+About 1-5% of all web content is in the form of files like images, music files, pdf files, word documents, etc.  The rest of the 95-99% of content on the web is served in a format called [XHTML](https://en.wikipedia.org/wiki/XHTML), or Extensible Hyper Text Markup Language. XHTML is an XML form of HTML. XML is a system designed to allow programs to represent objects in a text format that makes it easy for other programs to read them in and process their information.  An object is a defined thing with optional attributes, and may contain other objects in it. They are defined with an opening 'tag' and a matching closing 'tag'. There are potentially many different XML systems out there, but the one that is used on the web is a special system of XML which only supports certain objects defined for use in web browsers using the XHTML standard.  These are things you may have seen if you look at the 'source' for any website that you visit (e.g. visit http://dmlond-hawbridge-coders.herokuapp.com in your chrome browser, then hit the 'View' menu at the top of the browser, hit 'Developer', then hit 'View Source', in firefox you have to right click your mouse (ctrl-click on a mac laptop), then hit view source).  This shows you the raw XHTML. You should a bunch of stuff between a single <html> tag and its corresponding closing </html> tag (note the '/' in front of the name of the closing tag). Inside the <html></html> are a single <head></head> and <body></body>. This web page is actually written with spacing to help you see the hierarchical relationships of the different objects, but this is not always the case (compare google.com, or even github.com). 
+
+The 'head' object defines information 'about' the page (the meta information). It can influence the way the browser presents you with information only in the title of the page (in the tab), and sometimes a 'favicon' (note the little github octocat in the tab next to the title of this github page). It can, and often does specify the location of javascript and stylesheet 'assets' that must be loaded by the browser before it loads and presents the 'body'. These objects use object attributes to specify the urls to these assets (they can be hosted by the same web application, or hosted on other web applications). One notable object in the 'head' object is:
+```
+<link rel="stylesheet" href="/css/hawbridge_coders.css"/>
+```
+This is a 'link' object. Often, when an object will not contain other objects inside of them, such as this link, the opening and closing 'tag' are specified in a single tag ending with '/>'. This 'link' object has 2 attributes: 'rel', and 'href'. You should be able to see what each of these attributes is set to in the particular object. You will lots of different attributes used in xhtml objects.
+
+The 'body' object presents the main visible part of the page, and instructs the browser on how to render it. It can include many different types of objects in it, and these objects will often contain other objects within them, hierarchically. For example, in the index for this web application, you see a <div> object with an attribute 'id' set to 'welcome', which contains the <h1> large header object, and a <p> paragraph object.  The <h1> header object contains the text 'Hawbridge Coders', and the <p> object contains the text 'Welcome'.
+
+The objects in the body will often have an 'id' and/or a 'class'. These are attributes that are used by [Javascript](#javascript) and [Style](#style) to identify objects on which to act. The 'id' for every single object in an HTML document must be unique from the 'id' of the other objects in the page. This allows style and javascript to easily access a single element to act upon. Objects can have multiple 'values, seperated by spaces, and multiple objects can have the same value for class. This allows javascript and style to act on multiple objects in your document at the same time, such as to apply a common font color scheme to all objects with a specific class.
+
+There are many other special attributes that you may find interesting and useful, such as 'onclick' for <button> objects (see javascript below). See if you can figure out how the <href> object and attributes function using google.
+
+The XHTML page returned by a web application (e.g. the <html> object and all of its internal objects) is called a 'Document', and Javascript and Style are said to manipulate the 'Document Object Model' or DOM. You will see lots of tutorials about javascript and style talk about the DOM. 
 
 Style
 =====
-We applications often make use of [style](#style) to make them visually appealing, or present visual cues to the user to reinforce verbal responses. Like javascript, style is a client-side language that instructs modern browsers how to present the information. When you see boxes around information, or complex organization of things on the page, this is accomplished with style.
+We applications often make use of [style](#style) to make them visually appealing, present visual cues to the user to reinforce verbal responses, and even make pages more accessible to users with visual impairments. Style is a client-side language that instructs modern browsers to present the information in the body of the DOM in a specific way. When you see boxes around information, or complex organization of things on the page, this is accomplished with style. Style can be written in many ways. You can specify style for a specific object in the DOM using attributes, called 'inline style':
+```
+<h1 style="color:blue;margin-left:30px;">This is a heading.</h1>
+```
+You can also specify style as an object in the head, called 'internal style':
+```
+<head>
+<style>
+body {
+    background-color: linen;
+}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+</style>
+</head>
+```
+This would impact the entire document.
+
+Most modern applications, including this one, create one or more files, called stylesheets that they serve statically or dynamically by their application, and instruct the browser to load and process them by creating a special 'link' object with rel and href attributes inside the DOM head.
+```
+<link rel="stylesheet" href="/css/hawbridge_coders.css"/>
+```
+
+This application uses a static css file [hawbridge_coders.css](/blob/master/public/css/hawbridge_coders.css), but other applications use dynamic style generators, such as [sass](http://sass-lang.com/).
+
+Both internal style, and external style files use the same syntax, called css. It consists of a set of instructions to act on objects in the DOM to apply a set of style attributes, which the browser then uses to display the information with different orientation, outlines, font colors, etc. Objects in a stylesheet can be referenced by:
+* object type, e.g. 'p' which instructs the browser to apply the same style to ALL 'p' objects on the page
+* id, e.g. '#welcome' which instructs the browser to apply a style to a single object, with the id 'welcome'
+* class, e.g. '.hideable' which instructs the browser to apply a style to all objects with class 'hideable'
+* combinations of type and either class or id (usually class, since id is supposed to be globally unique across the board, while class is not). For example, 'div.hideable' would instruct the browser to apply a style to all divs with class 'hideable'. Note that you may see style applied to '.hideable' and 'div.hideable' in the same stylesheet, which would specify a style to apply to all objects with class 'hideable' and then specify a further style to add to this style specifically for any 'div' object with class 'hideable'.
+* multiple targets on the same line, seperated by spaces, e.g. 'h1 h2 h3' would specify style to apply to any h1, h2, or h3 object.
+ 
+See if you can figure out what style hawbridge_coders.css specifies for our index.
 
 Javascript
 ==========
+Javascript is experiencing heavy changes. There are many different frameworks out there to make it easy to add cool features, interactivity, and even accessibility (e.g. for color-blind, or even blind users). This application uses plain javascript in [hawbridge_coders.js](/blob/master/public/js/hawbridge_coders.js). There are other systems, such as [react](https://facebook.github.io/react/) and [coffeescript](http://coffeescript.org/), that use static or dynamically generated files in a different syntax than javascript, but which ultimately are turned into javascript that is returned to the browser. Another very popular javascript enhancement is [jquery](https://jquery.com/). It enhances javascript to use a syntax which is easier to write and understand by developers.
+
+This application javascript defines 2 functions, and then instructs the browser to process one of the functions, toggle_hideable, as soon as the window finishes loading (e.g. it has rendered the body).
+
+The toggle_hideable function is designed to find all objects in the DOM of class 'hideable' and hide them if they are currently visible, but reveal them if they are currently hidden. The function also changes the text on the button with id 'toggle_hideable_button' in coordination with the state of the hideable object, e.g. if it is hidden, the button is set to say 'Reveal Hidden Message', and if it is revealed, set the button to say 'Hide Message'. By running this function once when the page initially loads, the 'hideable' objects start in the hidden state. By setting toggle_hideable as the value of the 'onclick' attribute for the button with id 'toggle_hideable_button', the button is given an action by the browser of calling that function. Click it a few times to see what happens.
+
+The toggle_item_color function takes an argument 'item' and looks for the object in the DOM with the provided item as id. It will then change the color of that object to 'red' if it is currently 'blue', and vice versa. It also toggles the text on the button for that item to reflect what the button does given the state of the item. Notice how the button for each item (item1 and item2) uses the id of the item in the id of the button to link the item state with the state of the button used to toggle that items state. Also note how the 'onclick' attribute for each button passes the id of its target item (item1 or item2) as the argument to toggle_item_color. Click each one to see how they work.
 
 Creating a Github Account
 =========================
