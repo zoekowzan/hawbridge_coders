@@ -73,7 +73,7 @@ The XHTML page returned by a web application (e.g. the <html> object and all of 
 
 Style
 =====
-We applications often make use of [style](#style) to make them visually appealing, present visual cues to the user to reinforce verbal responses, and even make pages more accessible to users with visual impairments. Style is a client-side language that instructs modern browsers to present the information in the body of the DOM in a specific way. When you see boxes around information, or complex organization of things on the page, this is accomplished with style. Style can be written in many ways. You can specify style for a specific object in the DOM using attributes, called 'inline style':
+Web applications often make use of [style](#style) to make them visually appealing, present visual cues to the user to reinforce verbal responses, and even make pages more accessible to users with visual impairments. Style is a client-side language that instructs modern browsers to present the information in the body of the DOM in a specific way. When you see boxes around information, or complex organization of things on the page, this is accomplished with style. Style can be written in many ways. You can specify style for a specific object in the DOM using attributes, called 'inline style':
 ```
 <h1 style="color:blue;margin-left:30px;">This is a heading.</h1>
 ```
