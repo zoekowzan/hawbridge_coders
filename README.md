@@ -9,7 +9,7 @@ Table Of Contents
 * [Introduction](#introduction)
 * [Static Files](#static-files)
 * [Dynamic Pages](#dynamic-pages)
-* [Document Object Model](#xhtml-and-the-document-object-model)
+* [XHTML and the Document Object Model](#xhtml-and-the-document-object-model)
 * [Style](#style)
 * [Javascript](#javascript)
 
