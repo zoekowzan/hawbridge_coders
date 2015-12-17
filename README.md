@@ -67,7 +67,7 @@ The 'body' object presents the main visible part of the page, and instructs the 
 
 The objects in the body will often have an 'id' and/or a 'class'. These are attributes that are used by [Javascript](#javascript) and [Style](#style) to identify objects on which to act. The 'id' for every single object in an HTML document must be unique from the 'id' of the other objects in the page. This allows style and javascript to easily access a single element to act upon. Objects can have multiple values for 'class', seperated by spaces, and multiple objects can have the same value of class. This allows javascript and style to act on multiple objects in your document at the same time, such as to apply a common font color scheme to all objects with a specific class.
 
-There are many other special attributes that you may find interesting and useful, such as 'onclick' for <button> objects (see javascript below). See if you can figure out how the ```<href>``` object and attributes function using a google search for [html href](http://lmgtfy.com/?q=html+href).
+There are many other special attributes that you may find interesting and useful, such as 'onclick' for ```<button>``` objects (see javascript below). See if you can figure out how the ```<href>``` object and attributes function using a google search for [html href](http://lmgtfy.com/?q=html+href).
 
 The XHTML page returned by a web application (e.g. the ```<html>``` object and all of its internal objects) is called a 'Document', and Javascript and Style are said to manipulate the 'Document Object Model' or DOM. You will see lots of tutorials about javascript and style talk about the DOM. 
 
@@ -99,7 +99,7 @@ Most modern applications, including this one, create one or more files, called s
 <link rel="stylesheet" href="/css/hawbridge_coders.css"/>
 ```
 
-This application uses a static css file [hawbridge_coders.css](/blob/master/public/css/hawbridge_coders.css), but other applications use dynamic style generators, such as [sass](http://sass-lang.com/).
+This application uses a static css file [hawbridge_coders.css](/public/css/hawbridge_coders.css), but other applications use dynamic style generators, such as [sass](http://sass-lang.com/).
 
 Both internal style, and external style files use the same syntax, called css. It consists of a set of instructions to act on objects in the DOM to apply a set of style attributes, which the browser then uses to display the information with different orientation, outlines, font colors, etc. Objects in a stylesheet can be referenced by:
 * object type, e.g. 'p' which instructs the browser to apply the same style to ALL 'p' objects on the page
@@ -112,7 +112,7 @@ See if you can figure out what style hawbridge_coders.css specifies for our inde
 
 Javascript
 ==========
-Javascript is experiencing heavy changes. There are many different frameworks out there to make it easy to add cool features, interactivity, and even accessibility (e.g. for color-blind, or even blind users). This application uses plain javascript in [hawbridge_coders.js](/blob/master/public/js/hawbridge_coders.js). There are other systems, such as [react](https://facebook.github.io/react/) and [coffeescript](http://coffeescript.org/), that use static or dynamically generated files in a different syntax than javascript, but which ultimately are turned into javascript that is returned to the browser. Another very popular javascript enhancement is [jquery](https://jquery.com/). It enhances javascript to use a syntax which is easier to write and understand by developers.
+Javascript is experiencing heavy changes. There are many different frameworks out there to make it easy to add cool features, interactivity, and even accessibility (e.g. for color-blind, or even blind users). This application uses plain javascript in [hawbridge_coders.js](/public/js/hawbridge_coders.js). There are other systems, such as [react](https://facebook.github.io/react/) and [coffeescript](http://coffeescript.org/), that use static or dynamically generated files in a different syntax than javascript, but which ultimately are turned into javascript that is returned to the browser. Another very popular javascript enhancement is [jquery](https://jquery.com/). It enhances javascript to use a syntax which is easier to write and understand by developers.
 
 This application javascript defines 2 functions, and then instructs the browser to process one of the functions, toggle_hideable, as soon as the window finishes loading (e.g. it has rendered the body).
 
